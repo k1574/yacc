@@ -1,4 +1,4 @@
-CC = tcc
+CC = cc
 LD = $CC
 STRIP = strip
 NAME = yacc
@@ -17,6 +17,7 @@ INC = $INC9
 LIB9 = -L$PATH9 -l9
 LIB = $LIB9
 
-CPPFLAGS = $INC
+CPPFLAGS = $INC\
+	-D_DEFAULT_SOURCE
 CFLAGS =
 LDFLAGS = -static
