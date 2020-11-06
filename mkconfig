@@ -1,15 +1,12 @@
-CC = cc
-LD = $CC
-STRIP = strip
+MKPATH=../mk
+<$MKPATH/inc/path
+<$MKPATH/inc/util
+<$MKPATH/inc/lib9
+
 NAME = yacc
 
 # Path to "lib9".
 PATH9 = ../lib9
-
-LOCAL = $HOME/local
-BIN = $LOCAL/bin
-SHR = $LOCAL/shr
-MAN = $SHR/man/
 
 INC9 = -I$PATH9
 INC = $INC9
@@ -20,4 +17,4 @@ LIB = $LIB9
 CPPFLAGS = $INC\
 	-D_DEFAULT_SOURCE
 CFLAGS =
-LDFLAGS = -static
+LDFLAGS = $LD_STATIC_FLAG
